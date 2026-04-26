@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIWES Portfolio - Nwobi Divinefavour</title>
+
+<style>
+:root {
+    --bg: #f5f7fa;
+    --text: #333;
+    --card: #ffffff;
+    --primary: #0F2A44;
+}
+
+/* DARK MODE VARIABLES */
+.dark-mode {
+    --bg: #0b1a2a;
+    --text: #e6edf3;
+    --card: #13263a;
+    --primary: #4da3ff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: 0.3s;
+}
+
+/* HEADER */
+.header {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.header p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* BUTTONS */
+.cv-btn, .toggle-btn {
+    display: inline-block;
+    margin: 10px 5px 0;
+    padding: 8px 15px;
+    background: white;
+    color: var(--primary);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+/* INTRO */
+.intro {
+    text-align: center;
+    padding: 15px;
+    font-style: italic;
+}
+
+/* GRID */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* CARD */
+.card {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: var(--primary);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 6px;
+    margin: 15px 0;
+}
+
+.section-title {
+    margin-top: 15px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+ul {
+    padding-left: 18px;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: var(--text);
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h1>NWOBI NGOZICHUKWU DIVINEFAVOUR</h1>
+    <p>SIWES Portfolio | Computer Engineering, ABU Zaria</p>
+    <p>+234 813 730 9428 | ngdivinefavour@gmail.com</p>
+
+    <a href="cv.pdf" download class="cv-btn">Download CV</a>
+    <button class="toggle-btn" onclick="toggleMode()">🌙 Toggle Mode</button>
+</div>
+
+<div class="intro">
+    Computer Engineering student with foundational experience in embedded systems, circuit prototyping, and technical simulation through academic and group projects. Seeking a 6-month SIWES placement to develop practical IoT and hardware skills.
+</div>
+
+<div class="container">
+
+<!-- PROJECT 1 -->
+<div class="card">
+    <h3>01. Arduino Simulation — 3-LED Level Indicator</h3>
+    <img src="tinkercad.png" alt="Arduino TinkerCAD LED level indicator project">
+
+    <div class="section-title">Problem</div>
+    <p>How can a continuous analog input be translated into discrete output levels?</p>
+
+    <div class="section-title">Approach</div>
+    <ul>
+        <li>Used potentiometer as analog input</li>
+        <li>Read values using Arduino</li>
+        <li>Defined thresholds for LED control</li>
+    </ul>
+
+    <div class="section-title">Implementation</div>
+    <ul>
+        <li>Mapped 0–1023 into 3 ranges</li>
+        <li>Each range activates a different LED</li>
+        <li>Simulated system using TinkerCAD</li>
+    </ul>
+
+    <div class="section-title">Result</div>
+    <p>System consistently displays three distinct output levels based on analog input variation.</p>
+
+    <div class="section-title">Learning</div>
+    <p>Improved understanding of how analog inputs are processed into discrete outputs in embedded systems.</p>
+</div>
+
+<!-- PROJECT 2 -->
+<div class="card">
+    <h3>02. Smart Door Lock — RFID System</h3>
+    <img src="rfid.jpg" alt="RFID smart door lock system with Arduino">
+
+    <div class="section-title">Problem</div>
+    <p>How can access be restricted to authorized users?</p>
+
+    <div class="section-title">Approach</div>
+    <ul>
+        <li>RFID cards used as identifiers</li>
+        <li>Microcontroller verifies card data</li>
+    </ul>
+
+    <div class="section-title">Implementation</div>
+    <ul>
+        <li>RFID module reads UID</li>
+        <li>Arduino checks authorized IDs</li>
+        <li>Triggers access response</li>
+    </ul>
+
+    <div class="section-title">Result</div>
+    <p>System reliably differentiates between authorized and unauthorized users.</p>
+
+    <div class="section-title">Learning</div>
+    <p>Gained exposure to embedded authentication systems and hardware integration.</p>
+</div>
+
+<!-- PROJECT 3 -->
+<div class="card">
+    <h3>03. Smart Light System</h3>
+    <img src="smartlight.jpg" alt="Smart light system with sensor and OLED display">
+
+    <div class="section-title">Problem</div>
+    <p>How can a system respond automatically to environmental light conditions?</p>
+
+    <div class="section-title">Approach</div>
+    <ul>
+        <li>Used LDR sensor input</li>
+        <li>Processed data using microcontroller</li>
+        <li>Displayed output via OLED</li>
+    </ul>
+
+    <div class="section-title">Implementation</div>
+    <ul>
+        <li>Sensor reads environment</li>
+        <li>Arduino controls lighting output</li>
+        <li>Display shows system status</li>
+    </ul>
+
+    <div class="section-title">Result</div>
+    <p>System responds in real-time to environmental changes and updates output accordingly.</p>
+
+    <div class="section-title">Learning</div>
+    <p>Developed understanding of complete system integration from sensing to output.</p>
+</div>
+
+<!-- PROJECT 4 -->
+<div class="card">
+    <h3>04. LDR Sensor Analysis — MATLAB</h3>
+    <img src="matlab.png" alt="MATLAB simulation graphs of LDR sensor analysis">
+
+    <div class="section-title">Problem</div>
+    <p>How does an LDR behave under varying conditions?</p>
+
+    <div class="section-title">Approach</div>
+    <ul>
+        <li>Simulated sensor behavior in MATLAB</li>
+        <li>Analyzed light vs voltage relationships</li>
+    </ul>
+
+    <div class="section-title">Implementation</div>
+    <ul>
+        <li>Modeled different resistance values</li>
+        <li>Simulated temperature effects</li>
+        <li>Generated response curves</li>
+    </ul>
+
+    <div class="section-title">Result</div>
+    <p>Identified how circuit parameters influence sensor output behavior.</p>
+
+    <div class="section-title">Learning</div>
+    <p>Strengthened understanding of sensor modeling and system analysis.</p>
+</div>
+
+</div>
+
+<div class="footer">
+    “A motivated learner with growing interest in embedded systems and IoT development.”
+</div>
+
+<script>
+function toggleMode() {
+    document.body.classList.toggle("dark-mode");
+
+    // Save preference
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("mode", "dark");
+    } else {
+        localStorage.setItem("mode", "light");
+    }
+}
+
+// Load saved mode
+window.onload = function () {
+    if (localStorage.getItem("mode") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+};
+</script>
+
+</body>
+</html>
